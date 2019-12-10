@@ -9,8 +9,6 @@ RUN yum -y --setopt=tsflags=nodocs update && \
 RUN yum -y --setopt=tsflags=nodocs groupinstall 'Development Tools'
 RUN mkdir -p /root/gocode/bin /root/gocode/src \
     /root/gocode/src/github.com/ProdriveTechnologies
-#ENV GOPATH /root/gocode
-#ENV PATH $PATH:/usr/local/go/bin:$GOPATH/bin
 WORKDIR /root/gocode/src/github.com/ProdriveTechnologies
 RUN git clone https://github.com/ProdriveTechnologies/hpraid_exporter.git
 WORKDIR /root/gocode/src/github.com/ProdriveTechnologies/hpraid_exporter
