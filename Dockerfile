@@ -3,7 +3,7 @@ WORKDIR /root
 ENV COMMIT_HASH 76a6dd638038c39c1a3ecf6f41d462f0ec4cd8c0
 RUN curl -o /etc/yum.repos.d/vbatts-bazel-epel-7.repo \
     https://copr.fedorainfracloud.org/coprs/vbatts/bazel/repo/epel-7/vbatts-bazel-epel-7.repo && \
-    echo '4a73fc11148887d2c2ef48e18a939057fc26ecf9e71c02ed119ac7141c5a7ddd  /etc/yum.repos.d/vbatts-bazel-epel-7.repo' | sha256sum -c
+    echo '5e54bc5dbf82856c021908e30fba3299c464a755ff09b9b195de859e91585e78  /etc/yum.repos.d/vbatts-bazel-epel-7.repo' | sha256sum -c
 RUN yum -y --setopt=tsflags=nodocs update && \
     yum -y --setopt=tsflags=nodocs install bazel git
 RUN yum -y --setopt=tsflags=nodocs groupinstall 'Development Tools'
